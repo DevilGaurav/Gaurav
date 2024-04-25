@@ -70,6 +70,16 @@ node server.js
 select * from emp where deptno = (select deptno from emp where ename = 'smith');
 
 select * from emp where sal > (select sal from emp where ename = 'ashwin');
+//basic commands to remember
+git init
+git branch bname
+git checkout bname
+git status
+git add .
+git commit -m ""
+git push -d origin bname
+git merge bname
+
 
 select * from emp where sal > (select sal from emp where ename in ('jones','rhyn'));
 
