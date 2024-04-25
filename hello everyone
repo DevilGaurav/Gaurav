@@ -55,9 +55,17 @@ create table tableC(
 bid int primary key,
 bname enum('Sneha','madhura','gayatri')
 );
-
-
-
+17. pemp commands
+sudo apt install
+////for insatllation purpose 
+sudo apt update
+git clone ----
+sudo apt install nodejs
+sudo apt npm
+cd filename
+///for changing purpose
+npm install
+node server.js
 
 select * from emp where deptno = (select deptno from emp where ename = 'smith');
 
