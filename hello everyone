@@ -1,2 +1,70 @@
 hi there guys
 how are you
+
+1.
+select ename, sal, sal*0.15 PF from emp;
+
+2.
+select ename, dname from emp e, dept d where e.deptno = d.deptno;
+
+3.
+select ename,sal from emp where sal > (select sal from emp where empno = 123);
+
+4.
+select ename, job from emp where ename regexp '^A' and job regexp '.*K$';
+
+5.
+select avg(sal) from emp group by deptno;
+
+6.
+select * from emp where sal = (select distinct sal from emp order by sal desc limit 1 offset 2);
+
+7. 
+select deptno,dname , empno, ename from dept,emp;
+
+8. docker hub
+sudo apt install docker.io
+sudo systemctl status docker
+
+9. sudo docker ps
+
+10. sudo docker images
+11. sudo docker pull nginx
+
+12. sudo docker run --name xyz -d-p 8080:80 nginx
+
+13.git clone
+
+14.sudo docker build -t img .
+15. sudo docker run --name abc -d -p 8000:8000 img
+
+16. create table tableA(
+aid int auto_increment primary key,
+aname varchar(20),
+adate date not null,
+bid int,
+constraint f_bid foreign key(bid) references tableB(bid)
+on update set null
+on delete cascade
+);
+
+insert into tableA(aname,adate,bid) values('ccc','2001-01-02',10),('xxx','2000-01-03',20),('ppp','2000-02-12',30),
+('zzz','2002-01-02',10),('yyy','2003-11-23',30),('qqq','2002-05-02',30);
+
+create table tableC(
+bid int primary key,
+bname enum('Sneha','madhura','gayatri')
+);
+
+
+
+
+select * from emp where deptno = (select deptno from emp where ename = 'smith');
+
+select * from emp where sal > (select sal from emp where ename = 'ashwin');
+
+select * from emp where sal > (select sal from emp where ename in ('jones','rhyn'));
+
+
+
+
